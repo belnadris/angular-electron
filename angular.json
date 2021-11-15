@@ -33,7 +33,8 @@
             ],
             "scripts": [],
             "customWebpackConfig": {
-              "path": "./angular.webpack.js"
+              "path": "./angular.webpack.js",
+              "replaceDuplicatePlugins": true
             }
           },
           "configurations": {
@@ -125,7 +126,8 @@
               "src/assets"
             ],
             "customWebpackConfig": {
-              "path": "./angular.webpack.js"
+              "path": "./angular.webpack.js",
+              "replaceDuplicatePlugins": true
             }
           }
         },
@@ -159,7 +161,6 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
-      "styleext": "scss",
       "style": "scss"
     },
     "@schematics/angular:directive": {
