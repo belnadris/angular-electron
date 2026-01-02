@@ -13,9 +13,6 @@
             "sourceMaps": true,  
             "timeout": 10000,
             "trace": "verbose",
-            "sourceMapPathOverrides": {
-                "webpack:///./*": "${workspaceFolder}/*"
-            },
             "preLaunchTask": "Build.Renderer"
         },
         {

@@ -41,7 +41,7 @@
           "background": {
             "activeOnStart": true,
             "beginsPattern": "^.*",
-            "endsPattern": "^.*Compiled successfully.*"
+            "endsPattern": "Application bundle generation complete"
           }
         }
       }

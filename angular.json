@@ -72,7 +72,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ]
-            }
+            },
             "testing": {
               "polyfills": [
                 "zone.js",
