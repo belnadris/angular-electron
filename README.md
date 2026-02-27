@@ -14,18 +14,18 @@
 
 # Introduction
 
-Bootstrap and package your project with Angular 21 and Electron 39 (Typescript + SASS + Hot Reload) for creating Desktop applications.
+Bootstrap and package your project with Angular 21 and Electron 40 (Typescript + SASS + Hot Reload) for creating Desktop applications.
 
 Currently runs with:
 
-- Angular v21.0.3
-- Electron v39.2.5
+- Angular v21.2.0
+- Electron v40.6.1
 
 With this sample, you can:
 
 - Run your app in a local development environment with Electron & Hot reload
 - Run your app in a production environment
-- Execute your tests with Jest and Playwright (E2E)
+- Execute your tests with Vitest and Playwright (E2E)
 - Package your app into an executable file for Linux, Windows & Mac
 
 /!\ Hot reload only pertains to the renderer process. The main electron process is not able to be hot reloaded, only restarted.

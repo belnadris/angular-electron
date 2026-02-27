@@ -18,7 +18,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node-version: [22]
+        node-version: [24]
 
     # The type of runner that the job will run on
     runs-on: macos-latest
@@ -35,6 +35,16 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
 
+    - name: Cache Electron binaries
+      uses: actions/cache@v5
+      with:
+        path: |
+          ~/Library/Caches/electron
+          ~/Library/Caches/electron-builder
+        key: ${{ runner.os }}-electron-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-electron-
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v6
       with:
@@ -47,13 +57,17 @@ jobs:
         echo "Homebrew dependencies installed"
 
     - name: Install Dependencies
-      run: npm ci && npm i -D cli-truncate iconv-corefoundation
+      uses: nick-fields/retry@v3
+      with:
+        timeout_minutes: 10
+        max_attempts: 3
+        command: npm ci && npm i -D cli-truncate iconv-corefoundation
 
     - name: Check lint
       run: npm run lint
 
     - name: Install Playwright Browsers
-      run: npx playwright@1.57.0 install --with-deps
+      run: npx playwright@1.58.2 install --with-deps
 
     - name: Run headless unit test
       run: npm run test -- --reporters=default
@@ -62,4 +76,8 @@ jobs:
       run: npm run e2e
 
     - name: Build the app
-      run: npm run electron:build
+      uses: nick-fields/retry@v3
+      with:
+        timeout_minutes: 15
+        max_attempts: 3
+        command: npm run electron:build
