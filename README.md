@@ -14,12 +14,12 @@
 
 # Introduction
 
-Bootstrap and package your project with Angular 21 and Electron 39 (Typescript + SASS + Hot Reload) for creating Desktop applications.
+Bootstrap and package your project with Angular 21 and Electron 40 (Typescript + SASS + Hot Reload) for creating Desktop applications.
 
 Currently runs with:
 
-- Angular v21.0.3
-- Electron v39.2.5
+- Angular v21.2.0
+- Electron v40.6.1
 
 With this sample, you can:
 
