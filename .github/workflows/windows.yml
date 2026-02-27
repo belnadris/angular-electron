@@ -51,7 +51,7 @@ jobs:
       run: npm run lint
 
     - name: Install Playwright Browsers
-      run: npx playwright@1.57.0 install --with-deps
+      run: npx playwright@1.58.2 install --with-deps
 
     - name: Run headless unit test
       run: npm run test -- --reporters=default
