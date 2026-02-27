@@ -36,6 +36,16 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
 
+    - name: Cache Electron binaries
+      uses: actions/cache@v5
+      with:
+        path: |
+          ~/.cache/electron
+          ~/.cache/electron-builder
+        key: ${{ runner.os }}-electron-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-electron-
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v6
       with:
@@ -47,7 +57,11 @@ jobs:
         sudo apt-get install -y libgtk-3-dev webkit2gtk-4.0 libappindicator3-dev librsvg2-dev patchelf
 
     - name: Install Dependencies
-      run: npm ci
+      uses: nick-fields/retry@v3
+      with:
+        timeout_minutes: 10
+        max_attempts: 3
+        command: npm ci
 
     - name: Check lint
       run: npm run lint
@@ -66,4 +80,8 @@ jobs:
         run: npm run e2e
 
     - name: Build the app
-      run: npm run electron:build
+      uses: nick-fields/retry@v3
+      with:
+        timeout_minutes: 15
+        max_attempts: 3
+        command: npm run electron:build
