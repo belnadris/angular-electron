@@ -60,7 +60,6 @@ function createWindow(): BrowserWindow {
 }
 
 try {
-  ipcMain.handle('app:get-path', (_, name: Parameters<typeof app.getPath>[0]) => app.getPath(name));
   ipcMain.handle('app:get-version', () => app.getVersion());
 
   // This method will be called when Electron has finished
