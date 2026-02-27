@@ -1,4 +1,4 @@
-import {app, BrowserWindow, screen} from 'electron';
+import {app, BrowserWindow, ipcMain, screen} from 'electron';
 import * as path from 'path';
 import * as fs from 'fs';
 
@@ -60,6 +60,9 @@ function createWindow(): BrowserWindow {
 }
 
 try {
+  ipcMain.handle('app:get-path', (_, name: Parameters<typeof app.getPath>[0]) => app.getPath(name));
+  ipcMain.handle('app:get-version', () => app.getVersion());
+
   // This method will be called when Electron has finished
   // initialization and is ready to create browser windows.
   // Some APIs can only be used after this event occurs.
