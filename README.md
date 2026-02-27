@@ -35,7 +35,7 @@ With this sample, you can:
 *Clone this repository locally:*
 
 ``` bash
-git clone https://github.com/maximegris/angular-electron.git
+git clone https://github.com/belnadris/angular-electron.git
 ```
 
 *Install dependencies with npm (used by Electron renderer process):*
@@ -145,40 +145,40 @@ Please refer to [HOW_TO file](./HOW_TO.md)
 
 ## Branch & Packages version
 
-- Angular 4 & Electron 1 : Branch [angular4](https://github.com/maximegris/angular-electron/tree/angular4)
-- Angular 5 & Electron 1 : Branch [angular5](https://github.com/maximegris/angular-electron/tree/angular5)
-- Angular 6 & Electron 3 : Branch [angular6](https://github.com/maximegris/angular-electron/tree/angular6)
-- Angular 7 & Electron 3 : Branch [angular7](https://github.com/maximegris/angular-electron/tree/angular7)
-- Angular 8 & Electron 7 : Branch [angular8](https://github.com/maximegris/angular-electron/tree/angular8)
-- Angular 9 & Electron 7 : Branch [angular9](https://github.com/maximegris/angular-electron/tree/angular9)
-- Angular 10 & Electron 9 : Branch [angular10](https://github.com/maximegris/angular-electron/tree/angular10)
-- Angular 11 & Electron 12 : Branch [angular11](https://github.com/maximegris/angular-electron/tree/angular11)
-- Angular 12 & Electron 16 : Branch [angular12](https://github.com/maximegris/angular-electron/tree/angular12)
-- Angular 13 & Electron 18 : Branch [angular13](https://github.com/maximegris/angular-electron/tree/angular13)
-- Angular 14 & Electron 21 : Branch [angular14](https://github.com/maximegris/angular-electron/tree/angular14)
-- Angular 15 & Electron 24 : Branch [angular15](https://github.com/maximegris/angular-electron/tree/angular15)
-- Angular 16 & Electron 25 : Branch [angular16](https://github.com/maximegris/angular-electron/tree/angular16)
-- Angular 17 & Electron 30 : Branch [angular17](https://github.com/maximegris/angular-electron/tree/angular17)
-  Angular 19 & Electron 36 : Branch [angular19](https://github.com/maximegris/angular-electron/tree/angular19)
-  Angular 20 & Electron 39 : Branch [angular19](https://github.com/maximegris/angular-electron/tree/angular20)
+- Angular 4 & Electron 1 : Branch [angular4](https://github.com/belnadris/angular-electron/tree/angular4)
+- Angular 5 & Electron 1 : Branch [angular5](https://github.com/belnadris/angular-electron/tree/angular5)
+- Angular 6 & Electron 3 : Branch [angular6](https://github.com/belnadris/angular-electron/tree/angular6)
+- Angular 7 & Electron 3 : Branch [angular7](https://github.com/belnadris/angular-electron/tree/angular7)
+- Angular 8 & Electron 7 : Branch [angular8](https://github.com/belnadris/angular-electron/tree/angular8)
+- Angular 9 & Electron 7 : Branch [angular9](https://github.com/belnadris/angular-electron/tree/angular9)
+- Angular 10 & Electron 9 : Branch [angular10](https://github.com/belnadris/angular-electron/tree/angular10)
+- Angular 11 & Electron 12 : Branch [angular11](https://github.com/belnadris/angular-electron/tree/angular11)
+- Angular 12 & Electron 16 : Branch [angular12](https://github.com/belnadris/angular-electron/tree/angular12)
+- Angular 13 & Electron 18 : Branch [angular13](https://github.com/belnadris/angular-electron/tree/angular13)
+- Angular 14 & Electron 21 : Branch [angular14](https://github.com/belnadris/angular-electron/tree/angular14)
+- Angular 15 & Electron 24 : Branch [angular15](https://github.com/belnadris/angular-electron/tree/angular15)
+- Angular 16 & Electron 25 : Branch [angular16](https://github.com/belnadris/angular-electron/tree/angular16)
+- Angular 17 & Electron 30 : Branch [angular17](https://github.com/belnadris/angular-electron/tree/angular17)
+  Angular 19 & Electron 36 : Branch [angular19](https://github.com/belnadris/angular-electron/tree/angular19)
+  Angular 20 & Electron 39 : Branch [angular19](https://github.com/belnadris/angular-electron/tree/angular20)
 - Angular 21 & Electron 39 : (main)
 
 [maintained-badge]: https://img.shields.io/badge/maintained-yes-brightgreen
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
-[license]: https://github.com/maximegris/angular-electron/blob/main/LICENSE.md
+[license]: https://github.com/belnadris/angular-electron/blob/main/LICENSE.md
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-red.svg
 [prs]: http://makeapullrequest.com
 
-[linux-build-badge]: https://github.com/maximegris/angular-electron/workflows/Linux%20Build/badge.svg
-[linux-build]: https://github.com/maximegris/angular-electron/actions?query=workflow%3A%22Linux+Build%22
-[macos-build-badge]: https://github.com/maximegris/angular-electron/workflows/MacOS%20Build/badge.svg
-[macos-build]: https://github.com/maximegris/angular-electron/actions?query=workflow%3A%22MacOS+Build%22
-[windows-build-badge]: https://github.com/maximegris/angular-electron/workflows/Windows%20Build/badge.svg
-[windows-build]: https://github.com/maximegris/angular-electron/actions?query=workflow%3A%22Windows+Build%22
+[linux-build-badge]: https://github.com/belnadris/angular-electron/workflows/Linux%20Build/badge.svg
+[linux-build]: https://github.com/belnadris/angular-electron/actions?query=workflow%3A%22Linux+Build%22
+[macos-build-badge]: https://github.com/belnadris/angular-electron/workflows/MacOS%20Build/badge.svg
+[macos-build]: https://github.com/belnadris/angular-electron/actions?query=workflow%3A%22MacOS+Build%22
+[windows-build-badge]: https://github.com/belnadris/angular-electron/workflows/Windows%20Build/badge.svg
+[windows-build]: https://github.com/belnadris/angular-electron/actions?query=workflow%3A%22Windows+Build%22
 
-[github-watch-badge]: https://img.shields.io/github/watchers/maximegris/angular-electron.svg?style=social
-[github-watch]: https://github.com/maximegris/angular-electron/watchers
-[github-star-badge]: https://img.shields.io/github/stars/maximegris/angular-electron.svg?style=social
-[github-star]: https://github.com/maximegris/angular-electron/stargazers
-[twitter]: https://twitter.com/intent/tweet?text=Check%20out%20angular-electron!%20https://github.com/maximegris/angular-electron%20%F0%9F%91%8D
-[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/maximegris/angular-electron.svg?style=social
+[github-watch-badge]: https://img.shields.io/github/watchers/belnadris/angular-electron.svg?style=social
+[github-watch]: https://github.com/belnadris/angular-electron/watchers
+[github-star-badge]: https://img.shields.io/github/stars/belnadris/angular-electron.svg?style=social
+[github-star]: https://github.com/belnadris/angular-electron/stargazers
+[twitter]: https://twitter.com/intent/tweet?text=Check%20out%20angular-electron!%20https://github.com/belnadris/angular-electron%20%F0%9F%91%8D
+[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/belnadris/angular-electron.svg?style=social

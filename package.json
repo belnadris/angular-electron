@@ -2,7 +2,7 @@
   "name": "angular-electron",
   "version": "17.0.0",
   "description": "Angular 21 with Electron 39 (Typescript + SASS + Hot Reload)",
-  "homepage": "https://github.com/maximegris/angular-electron",
+  "homepage": "https://github.com/belnadris/angular-electron",
   "author": {
     "name": "Maxime GRIS",
     "email": "maxime.gris@gmail.com"
