@@ -64,7 +64,7 @@
     "@angular-eslint/schematics": "21.0.1",
     "@angular-eslint/template-parser": "21.0.1",
     "@angular/build": "21.0.2",
-    "@angular/cli": "21.0.2",
+    "@angular/cli": "21.2.0",
     "@angular/compiler-cli": "21.0.3",
     "@ngx-translate/core": "17.0.0",
     "@ngx-translate/http-loader": "17.0.0",
