@@ -1,7 +1,7 @@
 {
   "name": "angular-electron",
   "version": "17.0.0",
-  "description": "Angular 21 with Electron 39 (Typescript + SASS + Hot Reload)",
+  "description": "Angular 21 with Electron 40 (Typescript + SASS + Hot Reload)",
   "homepage": "https://github.com/belnadris/angular-electron",
   "author": {
     "name": "Maxime GRIS",
@@ -34,7 +34,9 @@
     "web:prod": "npm run build -- -c production",
     "electron": "electron",
     "electron:serve-tsc": "tsc -p tsconfig.serve.json",
-    "electron:serve": "wait-on tcp:4200 && npm run electron:serve-tsc && electron . --serve",
+    "electron:serve-tsc:watch": "tsc -p tsconfig.serve.json --watch --preserveWatchOutput",
+    "electron:start": "electron . --serve",
+    "electron:serve": "wait-on tcp:4200 && npm run electron:serve-tsc && npm-run-all -p electron:serve-tsc:watch electron:start",
     "electron:local": "npm run web:dev && electron .",
     "electron:build": "npm run web:prod && electron-builder build --publish=never",
     "test": "ng test --watch=false",
