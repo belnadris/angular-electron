@@ -26,6 +26,7 @@ export class AppComponent {
       console.log('Run in electron');
       console.log('Electron ipcRenderer', this.electronService.ipcRenderer);
       console.log('NodeJS childProcess', this.electronService.childProcess);
+      void this.electronService.ipcRenderer.invoke('app:get-version').then(v => console.log('App version:', v));
     } else {
       console.log('Run in browser');
     }
