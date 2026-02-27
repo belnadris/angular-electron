@@ -31,7 +31,9 @@ function createWindow(): BrowserWindow {
 
     import('electron-reloader').then(reloader => {
       const reloaderFn = (reloader as any).default || reloader;
-      reloaderFn(module);
+      // watchRenderer: false — Angular dev server handles HMR for the renderer.
+      // Without this, reloader triggers spurious reloads on macOS (issue #840).
+      reloaderFn(module, { watchRenderer: false });
     });
     win.loadURL('http://localhost:4200');
   } else {
