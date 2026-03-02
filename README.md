@@ -143,26 +143,6 @@ Please note that Hot reload is only available in Renderer process.
 
 Please refer to [HOW_TO file](./HOW_TO.md)
 
-## Branch & Packages version
-
-- Angular 4 & Electron 1 : Branch [angular4](https://github.com/belnadris/angular-electron/tree/angular4)
-- Angular 5 & Electron 1 : Branch [angular5](https://github.com/belnadris/angular-electron/tree/angular5)
-- Angular 6 & Electron 3 : Branch [angular6](https://github.com/belnadris/angular-electron/tree/angular6)
-- Angular 7 & Electron 3 : Branch [angular7](https://github.com/belnadris/angular-electron/tree/angular7)
-- Angular 8 & Electron 7 : Branch [angular8](https://github.com/belnadris/angular-electron/tree/angular8)
-- Angular 9 & Electron 7 : Branch [angular9](https://github.com/belnadris/angular-electron/tree/angular9)
-- Angular 10 & Electron 9 : Branch [angular10](https://github.com/belnadris/angular-electron/tree/angular10)
-- Angular 11 & Electron 12 : Branch [angular11](https://github.com/belnadris/angular-electron/tree/angular11)
-- Angular 12 & Electron 16 : Branch [angular12](https://github.com/belnadris/angular-electron/tree/angular12)
-- Angular 13 & Electron 18 : Branch [angular13](https://github.com/belnadris/angular-electron/tree/angular13)
-- Angular 14 & Electron 21 : Branch [angular14](https://github.com/belnadris/angular-electron/tree/angular14)
-- Angular 15 & Electron 24 : Branch [angular15](https://github.com/belnadris/angular-electron/tree/angular15)
-- Angular 16 & Electron 25 : Branch [angular16](https://github.com/belnadris/angular-electron/tree/angular16)
-- Angular 17 & Electron 30 : Branch [angular17](https://github.com/belnadris/angular-electron/tree/angular17)
-  Angular 19 & Electron 36 : Branch [angular19](https://github.com/belnadris/angular-electron/tree/angular19)
-  Angular 20 & Electron 39 : Branch [angular19](https://github.com/belnadris/angular-electron/tree/angular20)
-- Angular 21 & Electron 39 : (main)
-
 [maintained-badge]: https://img.shields.io/badge/maintained-yes-brightgreen
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license]: https://github.com/belnadris/angular-electron/blob/main/LICENSE.md

@@ -1,0 +1,106 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: 'Version bump type'
+        required: true
+        type: choice
+        options: [patch, minor, major]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Guard — owner only
+        if: github.actor != github.repository_owner
+        run: |
+          echo "Only the repository owner can trigger releases."
+          exit 1
+
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node 24
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Bump version
+        env:
+          BUMP: ${{ github.event.inputs.bump }}
+        run: npm version "$BUMP" --no-git-tag-version
+
+      - name: Capture new version
+        id: version
+        run: echo "version=$(jq -r .version package.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Generate changelog
+        run: |
+          node -e "
+          const { execSync } = require('child_process');
+          const fs = require('fs');
+
+          const lastTag = execSync('git describe --tags --abbrev=0').toString().trim();
+          const log = execSync('git log ' + lastTag + '..HEAD --format=%s').toString().trim();
+
+          const types = [
+            ['feat',     '### Features'],
+            ['fix',      '### Bug Fixes'],
+            ['refactor', '### Refactoring'],
+            ['revert',   '### Reverts'],
+            ['perf',     '### Performance'],
+          ];
+          const typeMap = Object.fromEntries(types.map(([k, v]) => [k, v]));
+
+          const pattern = /^(\w+)(\(.+?\))?(!)?: (.+)$/;
+          const groups = {};
+
+          for (const line of log.split('\n')) {
+            const m = line.match(pattern);
+            if (!m) continue;
+            const type = m[1];
+            const scope = m[2] ? m[2].slice(1, -1) : null;
+            const msg = m[4];
+            const label = typeMap[type];
+            if (!label) continue;
+            if (!groups[type]) groups[type] = [];
+            groups[type].push(scope ? '- **' + scope + '**: ' + msg : '- ' + msg);
+          }
+
+          const sections = types
+            .filter(([k]) => groups[k])
+            .map(([k, header]) => header + '\n' + groups[k].join('\n'))
+            .join('\n\n');
+
+          const body = sections || '_No conventional commits found since last release._';
+          fs.writeFileSync('CHANGELOG_BODY.md', body);
+          console.log('Changelog written.');
+          "
+
+      - name: Commit, tag, and push
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          git add package.json app/package.json
+          git commit -m "[Bumped Version] ${VERSION}"
+          git push origin main
+          git tag "${VERSION}"
+          git push origin "${VERSION}"
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: gh release create "${VERSION}" --notes-file CHANGELOG_BODY.md --title "${VERSION}"
