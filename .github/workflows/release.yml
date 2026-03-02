@@ -93,6 +93,9 @@ jobs:
         env:
           VERSION: ${{ steps.version.outputs.version }}
         run: |
+          git stash
+          git pull --rebase origin main
+          git stash pop
           git add package.json app/package.json
           git commit -m "[Bumped Version] ${VERSION}"
           git push origin main
