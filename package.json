@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "@angular/common": "21.2.0",
-    "@angular/compiler": "21.2.0",
+    "@angular/compiler": "21.2.4",
     "@angular/core": "21.2.0",
     "@angular/forms": "21.2.0",
     "@angular/language-service": "21.2.0",
