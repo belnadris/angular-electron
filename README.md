@@ -112,6 +112,25 @@ Maybe you only want to execute the application in the browser with hot reload? J
 
 **Your application is optimised. Only /dist folder and NodeJS dependencies are included in the final bundle.**
 
+## Building Flatpak (Linux)
+
+On Linux, `npm run electron:build` produces both an AppImage and a Flatpak. The Flatpak build requires additional tooling:
+
+``` bash
+# Install flatpak and flatpak-builder
+sudo apt install flatpak flatpak-builder
+
+# Add the Flathub remote
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# Install the required runtimes
+flatpak install flathub org.freedesktop.Platform//25.08
+flatpak install flathub org.freedesktop.Sdk//25.08
+flatpak install flathub org.electronjs.Electron2.BaseApp//25.08
+```
+
+Once the runtimes are installed, `npm run electron:build` will generate the Flatpak bundle alongside the AppImage in the `release/` folder.
+
 ## You want to use a specific lib (like rxjs) in electron main thread ?
 
 YES! You can do it! Just by importing your library in npm dependencies section of `app/package.json` with `npm install --save XXXXX`. \

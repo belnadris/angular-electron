@@ -32,7 +32,29 @@
   "linux": {
     "icon": "dist/browser/assets/icons",
     "target": [
-      "AppImage"
+      "AppImage",
+      {
+        "target": "flatpak",
+        "arch": ["x64"]
+      }
+    ]
+  },
+  "flatpak": {
+    "category": "Utility",
+    "base": "org.electronjs.Electron2.BaseApp",
+    "baseVersion": "25.08",
+    "runtime": "org.freedesktop.Platform",
+    "runtimeVersion": "25.08",
+    "sdk": "org.freedesktop.Sdk",
+    "finishArgs": [
+      "--socket=wayland",
+      "--socket=x11",
+      "--share=ipc",
+      "--device=dri",
+      "--socket=pulseaudio",
+      "--filesystem=home",
+      "--share=network",
+      "--talk-name=org.freedesktop.Notifications"
     ]
   }
 }
