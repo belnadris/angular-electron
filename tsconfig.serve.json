@@ -2,10 +2,10 @@
   "compilerOptions": {
     "sourceMap": true,
     "declaration": false,
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "commonjs",
+    "module": "node16",
     "target": "es2015",
     "types": [
       "node"

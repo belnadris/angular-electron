@@ -1,7 +1,7 @@
 {
   "name": "angular-electron",
-  "version": "17.1.0",
-  "description": "Angular 21 with Electron 41 (Typescript + SASS + Hot Reload)",
+  "version": "22.0.0",
+  "description": "Angular 22 with Electron 42 (Typescript + SASS + Hot Reload)",
   "homepage": "https://github.com/belnadris/angular-electron",
   "author": {
     "name": "Maxime GRIS",
@@ -9,9 +9,9 @@
   },
   "keywords": [
     "angular",
-    "angular 21",
+    "angular 22",
     "electron",
-    "electron 41",
+    "electron 42",
     "nodejs",
     "typescript",
     "vitest",
@@ -47,61 +47,62 @@
     "postversion": "node -e \"const fs=require('fs');const app=JSON.parse(fs.readFileSync('./app/package.json'));app.version=require('./package.json').version;fs.writeFileSync('./app/package.json',JSON.stringify(app,null,2)+'\\n');\" && git add app/package.json"
   },
   "dependencies": {
-    "@angular/common": "21.2.10",
-    "@angular/compiler": "21.2.10",
-    "@angular/core": "21.2.10",
-    "@angular/forms": "21.2.10",
-    "@angular/language-service": "21.2.10",
-    "@angular/platform-browser": "21.2.10",
-    "@angular/platform-browser-dynamic": "21.2.10",
-    "@angular/router": "21.2.10",
+    "@angular/common": "22.0.0",
+    "@angular/compiler": "22.0.0",
+    "@angular/core": "22.0.0",
+    "@angular/forms": "22.0.0",
+    "@angular/language-service": "22.0.0",
+    "@angular/platform-browser": "22.0.0",
+    "@angular/platform-browser-dynamic": "22.0.0",
+    "@angular/router": "22.0.0",
     "rxjs": "7.8.2",
     "tslib": "2.8.1",
-    "zone.js": "0.16.1"
+    "zone.js": "0.16.2"
   },
   "devDependencies": {
-    "@angular-eslint/builder": "21.3.1",
-    "@angular-eslint/eslint-plugin": "21.3.1",
-    "@angular-eslint/eslint-plugin-template": "21.3.1",
-    "@angular-eslint/schematics": "21.3.1",
-    "@angular-eslint/template-parser": "21.3.1",
-    "@angular/build": "21.2.8",
-    "@angular/cli": "21.2.8",
-    "@angular/compiler-cli": "21.2.10",
-    "@ngx-translate/core": "17.0.0",
-    "@ngx-translate/http-loader": "17.0.0",
-    "@playwright/test": "1.59.1",
-    "@types/node": "24.12.2",
-    "@typescript-eslint/eslint-plugin": "8.59.1",
-    "@typescript-eslint/parser": "8.59.1",
-    "@vitest/browser-playwright": "4.1.5",
-    "@vitest/coverage-v8": "4.1.5",
-    "@vitest/ui": "4.1.5",
-    "concurrently": "9.2.1",
-    "electron": "41.3.0",
-    "electron-builder": "26.8.1",
+    "@angular-eslint/builder": "22.0.0",
+    "@angular-eslint/eslint-plugin": "22.0.0",
+    "@angular-eslint/eslint-plugin-template": "22.0.0",
+    "@angular-eslint/schematics": "22.0.0",
+    "@angular-eslint/template-parser": "22.0.0",
+    "angular-eslint": "22.0.0",
+    "@angular/build": "22.0.0",
+    "@angular/cli": "22.0.0",
+    "@angular/compiler-cli": "22.0.0",
+    "@ngx-translate/core": "18.0.0",
+    "@ngx-translate/http-loader": "18.0.0",
+    "@playwright/test": "1.60.0",
+    "@types/node": "24.13.1",
+    "@typescript-eslint/eslint-plugin": "8.61.0",
+    "@typescript-eslint/parser": "8.61.0",
+    "typescript-eslint": "8.61.0",
+    "@vitest/browser-playwright": "4.1.8",
+    "@vitest/coverage-v8": "4.1.8",
+    "@vitest/ui": "4.1.8",
+    "concurrently": "10.0.3",
+    "electron": "42.4.0",
+    "electron-builder": "26.15.3",
     "electron-debug": "4.1.0",
     "electron-reloader": "1.2.3",
     "eslint": "9.39.4",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jsdoc": "62.9.0",
     "eslint-plugin-prefer-arrow": "1.2.3",
-    "jsdom": "29.1.0",
-    "playwright": "1.59.1",
+    "jsdom": "29.1.1",
+    "playwright": "1.60.0",
     "ts-node": "10.9.2",
-    "typescript": "5.9.3",
-    "vitest": "4.1.5",
-    "wait-on": "9.0.5"
+    "typescript": "6.0.3",
+    "vitest": "4.1.8",
+    "wait-on": "9.0.10"
   },
   "engines": {
-    "node": ">= 22.12.0 || >= 24.0.0",
-    "typescript": ">= 5.8.0 < 6.0.0"
+    "node": ">= 22.22.3 || >= 24.15.0",
+    "typescript": ">= 6.0.0 < 6.1.0"
   },
   "overrides": {
-    "undici": ">=7.24.3",
-    "yauzl": ">=3.2.1"
+    "undici": ">=7.24.3"
   },
   "browserslist": [
-    "chrome 146"
+    "chrome 148"
   ]
 }
