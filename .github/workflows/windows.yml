@@ -15,11 +15,10 @@ on:
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-permissions:
-  contents: read
-
 jobs:
   build:
+    permissions:
+      contents: read
     strategy:
       matrix:
         node-version: [24]
