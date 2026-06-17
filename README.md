@@ -18,7 +18,7 @@ Bootstrap and package your project with Angular 22 and Electron 42 (Typescript +
 
 Currently runs with:
 
-- Angular v22.0.0
+- Angular v22.0.1
 - Electron v42.4.0
 
 With this sample, you can:
