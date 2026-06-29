@@ -30,7 +30,7 @@ jobs:
     - uses: actions/checkout@v7
 
     - name: Cache Node modules
-      uses: actions/cache@v5
+      uses: actions/cache@v6
       with:
         # npm cache files are stored in ~/.npm
         path: ~/.npm
@@ -39,7 +39,7 @@ jobs:
           ${{ runner.os }}-node-
 
     - name: Cache Electron binaries
-      uses: actions/cache@v5
+      uses: actions/cache@v6
       with:
         path: |
           ${{ env.LOCALAPPDATA }}\electron\Cache
