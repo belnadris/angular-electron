@@ -1,0 +1,12 @@
+{
+  "PAGES": {
+      "HOME": {
+          "TITLE": "앱이 작동합니다!",
+          "GO_TO_DETAIL": "상세 페이지로 이동"
+      },
+      "DETAIL": {
+        "TITLE": "상세 페이지!",
+        "BACK_TO_HOME": "홈으로 돌아가기"
+    }
+  }
+}
