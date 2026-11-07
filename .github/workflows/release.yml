@@ -30,7 +30,7 @@ jobs:
       - name: Setup Node 24
         uses: actions/setup-node@v7
         with:
-          node-version: '24'
+          node-version: '26'
 
       - name: Configure git
         run: |

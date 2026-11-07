@@ -121,7 +121,7 @@
               [
                 "html",
                 {
-                  "outputFile": "test-results/vitest/index.html"
+                  "outputDir": "test-results/vitest"
                 }
               ]
             ]

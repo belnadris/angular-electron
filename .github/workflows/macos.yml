@@ -20,7 +20,7 @@ jobs:
       contents: read
     strategy:
       matrix:
-        node-version: [24]
+        node-version: [26]
 
     # The type of runner that the job will run on
     runs-on: macos-latest

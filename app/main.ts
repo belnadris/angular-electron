@@ -1,6 +1,7 @@
 import {app, BrowserWindow, ipcMain, screen} from 'electron';
 import * as path from 'path';
 import * as fs from 'fs';
+import {pathToFileURL} from 'url';
 
 let win: BrowserWindow | null = null;
 const args = process.argv.slice(1),
@@ -30,10 +31,9 @@ function createWindow(): BrowserWindow {
     });
 
     import('electron-reloader').then(reloader => {
-      const reloaderFn = (reloader as any).default || reloader;
-      // watchRenderer: false — Angular dev server handles HMR for the renderer.
+      // watchRenderer: false, Angular dev server handles HMR for the renderer.
       // Without this, reloader triggers spurious reloads on macOS (issue #840).
-      reloaderFn(module, { watchRenderer: false });
+      reloader.default({url: pathToFileURL(__filename).href} as ImportMeta, {watchRenderer: false});
     });
     win.loadURL('http://localhost:4200');
   } else {
